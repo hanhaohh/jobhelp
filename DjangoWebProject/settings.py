@@ -19,16 +19,17 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
+        'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': 'us-cdbr-azure-east-a.cloudapp.net',
+        'USER': 'b69b5911ae9066',
+        'NAME': 'sweatjob_sql',
+        'PASSWORD': 'a456504e',
+        # 'OPTIONS': {'ssl': {'ca':'/Users/haohan/Desktop/cvjob/ssl/cleardb-ca.pem', 
+        # 'cert':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-cert.pem',
+        # 'key':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-key.pem'}},
 }
-
+}
 LOGIN_URL = '/login'
 
 # Local time zone for this installation. Choices can be found here:
@@ -104,7 +105,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
@@ -124,6 +125,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
