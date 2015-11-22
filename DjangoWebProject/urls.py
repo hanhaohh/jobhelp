@@ -3,18 +3,19 @@ Definition of urls for DjangoWebProject.
 """
 
 from datetime import datetime
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url,include
 from app.forms import BootstrapAuthenticationForm
 
 # Uncomment the next lines to enable the admin:
-# from django.conf.urls import include
-# from django.contrib import admin
-# admin.autodiscover()
+from django.conf.urls import include
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'app.views.home', name='home'),
-    url(r'^contact$', 'app.views.contact', name='contact'),
+	url(r'^job/', include('main.url')),
+    url(r'^index$', 'app.views.index', name='index'),
     url(r'^about', 'app.views.about', name='about'),
     url(r'^login/$',
         'django.contrib.auth.views.login',
