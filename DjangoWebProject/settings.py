@@ -4,7 +4,6 @@ Django settings for DjangoWebProject project.
 
 from os import path
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -25,12 +24,12 @@ DATABASES = {
         'USER': 'b69b5911ae9066',
         'NAME': 'sweatjob_sql',
         'PASSWORD': 'a456504e',
-        'OPTIONS': {'ssl': {'ca':'/Users/haohan/Desktop/cvjob/ssl/cleardb-ca.pem', 
-        'cert':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-cert.pem',
-        'key':'/Users/haohan/web/nice/jobhelp/ssl/client-key-nopass.pem'}},
+        'OPTIONS': {'ssl': {'ca':PROJECT_ROOT+'/ssl/cleardb-ca.pem', 
+        'cert':PROJECT_ROOT+'/ssl/d4f1130ec88edd-cert.pem',
+        'key':PROJECT_ROOT+'/ssl/client-key-nopass.pem'}},
 }
 }
-
+print DATABASES
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
