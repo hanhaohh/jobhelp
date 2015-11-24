@@ -18,18 +18,30 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+# DATABASES = {
+#         'default':{
+#         'ENGINE': 'django.db.backends.mysql',
+#         'HOST': 'us-cdbr-azure-east-a.cloudapp.net',
+#         'USER': 'b69b5911ae9066',
+#         'NAME': 'sweatjob_sql',
+#         'PASSWORD': 'a456504e',
+#         # 'OPTIONS': {'ssl': {'ca':'/Users/haohan/Desktop/cvjob/ssl/cleardb-ca.pem', 
+#         # 'cert':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-cert.pem',
+#         # 'key':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-key.pem'}},
+# }
+# }
+
 DATABASES = {
-        'default':{
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'us-cdbr-azure-east-a.cloudapp.net',
-        'USER': 'b69b5911ae9066',
-        'NAME': 'sweatjob_sql',
-        'PASSWORD': 'a456504e',
-        # 'OPTIONS': {'ssl': {'ca':'/Users/haohan/Desktop/cvjob/ssl/cleardb-ca.pem', 
-        # 'cert':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-cert.pem',
-        # 'key':'/Users/haohan/Desktop/cvjob/ssl/d4f1130ec88edd-key.pem'}},
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
 }
-}
+
 LOGIN_URL = '/login'
 
 # Local time zone for this installation. Choices can be found here:
