@@ -2,7 +2,7 @@
 
 The project is based on Django and include following parts:
 
-1.	Crawl website to get job description.
+1.	Crawl website to get job descriptions
 2.	A content based recommendation algorithm to match job and JD using Spark MLlib
 3.	Store the result in Elastic Search
-4.	Push related Jobs to users based on their resume.
+4.	Push related Jobs to users based on their resume
