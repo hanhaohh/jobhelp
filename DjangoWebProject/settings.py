@@ -29,7 +29,6 @@ MANAGERS = ADMINS
 #        'key':PROJECT_ROOT+'/ssl/client-key-nopass.pem'}},
 #}
 #}
-print DATABASES
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
