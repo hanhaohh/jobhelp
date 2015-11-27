@@ -17,29 +17,29 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-        'default':{
-        'ENGINE': 'django.db.backends.mysql',
-        'HOST': 'us-cdbr-azure-east-a.cloudapp.net',
-        'USER': 'b69b5911ae9066',
-        'NAME': 'sweatjob_sql',
-        'PASSWORD': 'a456504e',
-        'OPTIONS': {'ssl': {'ca':PROJECT_ROOT+'/ssl/cleardb-ca.pem', 
-        'cert':PROJECT_ROOT+'/ssl/d4f1130ec88edd-cert.pem',
-        'key':PROJECT_ROOT+'/ssl/client-key-nopass.pem'}},
-}
-}
+#DATABASES = {
+#        'default':{
+#        'ENGINE': 'django.db.backends.mysql',
+#        'HOST': 'us-cdbr-azure-east-a.cloudapp.net',
+#        'USER': 'b69b5911ae9066',
+#        'NAME': 'sweatjob_sql',
+#        'PASSWORD': 'a456504e',
+#        'OPTIONS': {'ssl': {'ca':PROJECT_ROOT+'/ssl/cleardb-ca.pem', 
+#        'cert':PROJECT_ROOT+'/ssl/d4f1130ec88edd-cert.pem',
+#        'key':PROJECT_ROOT+'/ssl/client-key-nopass.pem'}},
+#}
+#}
 print DATABASES
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
-#         'USER': '',
-#         'PASSWORD': '',
-#         'HOST': '',
-#         'PORT': '',
-#     }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': path.join(PROJECT_ROOT, 'db.sqlite3'),
+         'USER': '',
+         'PASSWORD': '',
+         'HOST': '',
+         'PORT': '',
+     }
+}
 
 LOGIN_URL = '/login'
 
