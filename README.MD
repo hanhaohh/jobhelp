@@ -7,4 +7,4 @@ The project is based on Django and include following parts:
 3.	Store the result in Elastic Search
 4.	Push related Jobs to users based on their resume
 
-Contact: hhan2@stevens.edu
+Contact: Hao<hhan2@stevens.edu>
