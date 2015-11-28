@@ -7,4 +7,5 @@ The project is based on Django and include following parts:
 3.	Store the result in Elastic Search
 4.	Push related Jobs to users based on their resume
 
-Contact: Hao<hhan2@stevens.edu>
+### Job Description database is implemented in Elasticsearch for the convenience of search. ES host is http://es-nicejob.cloudapp.net:9200/
+Contact me if you want to login in ES : Hao<hhan2@stevens.edu>
