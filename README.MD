@@ -9,4 +9,4 @@ The project is based on Django and include following parts:
 
 ### Job Description database is implemented in Elasticsearch for the convenience of search. ES host is http://es-nicejob.cloudapp.net:9200/
 
-Contact me if you want to login in ES : Hao<hhan2@stevens.edu>
+Contact me if you want to login in ES : Hao <hhan2@stevens.edu>
