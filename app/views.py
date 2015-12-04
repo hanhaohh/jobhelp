@@ -1,11 +1,13 @@
 """
 Definition of views.
 """
+from login.forms import *
 from django.shortcuts import render_to_response 
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from django.views.decorators.csrf import csrf_project
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
@@ -64,6 +66,36 @@ def home(request):
             "flag_login":flag_login
     })
     )
+@csrf_protect
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(
+            username = form.cleaned_data['username'],
+            password = form.cleaned_data['password1'],
+            email = form.cleaned_data['email']
+            )
+            return HttpResponseRedirect('/register/success/')
+    else:
+        form = RegistrationForm()
+    variables = RequestContext(request, {
+    'form': form
+    })
+
+    return render_to_response(
+    'registration/register.html',
+    variables,
+    )
+
+def register_success(request):
+    return render_to_response(
+    'registration/success.html',
+    )
+
+def logout_page(request):
+    logout(request)
+    return HttpResponseRedirect('/')
 
 
 def index(request):

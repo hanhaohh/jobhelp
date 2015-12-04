@@ -5,6 +5,7 @@ Definition of urls for DjangoWebProject.
 from datetime import datetime
 from django.conf.urls import patterns, url,include
 from app.forms import BootstrapAuthenticationForm
+from app.forms import RegistrationForm
 
 # Uncomment the next lines to enable the admin:
 from django.conf.urls import include
@@ -29,6 +30,8 @@ urlpatterns = patterns('',
             }
         },
         name='login'),
+    url(r'^register/$', register),
+    url(r'^register/success/$', register_success),
     url(r'^logout$',
         'django.contrib.auth.views.logout',
         {
